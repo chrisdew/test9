@@ -1,0 +1,21 @@
+{ "name" : "iterparse"
+, "description" : "Am iterative parser."
+, "version" : "0.0.1"
+, "maintainers" :
+  [ { "name": "Chris Dew"
+    , "email": "cmsdew@gmail.com"
+    }
+  ]
+, "bugs" : { "web" : "http://github.com/chrisdew/test9/issues" }
+, "licenses" : [ { "type" : "MIT" } ]
+, "repositories" :
+  [ { "type" : "git"
+    , "url" : "http://github.com/chrisdew/test9"
+    }
+  ]
+, "main" : "./lib/iterparse.js"
+, "engines" : { "node" : ">=0.2.6" }
+, "dependencies" : { "vows" : ">=0.5.2"
+                   , "docco" : ">=0.3.0"
+                   }
+}
