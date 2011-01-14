@@ -10,6 +10,10 @@ vows.describe('Literal Test').addBatch( {
 			assert.deepEqual(topic.expecting, ["o", "l", "l", "e", "h"]);
 			assert.deepEqual(topic.matching, []);
 			assert.deepEqual(topic.failing, []);
+			assert.isTrue(topic.open());
+			assert.isFalse(topic.matched());
+			assert.isFalse(topic.failed());
+			assert.deepEqual(topic.completions(), ['hello']);
 		}
 	}
 }).export(module);
