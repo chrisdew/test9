@@ -13,8 +13,6 @@ vows.describe('Conthunktor Test').addBatch( {
 	'conthunktor' : {
 		topic : p.conthunktor,
 		'[]' : function(topic) {
-            //console.log(Cons, topic);
-
             var C = p.conthunktor(Cons, []);
             var o = C();
             assert.deepEqual(o.getArgs(), []);
