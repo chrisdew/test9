@@ -20,6 +20,20 @@ vows.describe('Sequence Test').addBatch( {
 			assert.isFalse(topic.matched());
 			assert.isFalse(topic.failed());
 			assert.deepEqual(topic.completions(), ['ello world']);
+		},
+		'parses "hello wo"' : function(topic) {
+            topic.push("e")
+            	 .push("l")
+            	 .push("l")
+            	 .push("o")
+            	 .push(" ")
+            	 .push("w")
+            	 .push("o")
+            	 ;
+			assert.isTrue(topic.open());
+			assert.isFalse(topic.matched());
+			assert.isFalse(topic.failed());
+			assert.deepEqual(topic.completions(), ['rld']);
 		}
 	}
 }).export(module);
