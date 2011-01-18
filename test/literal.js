@@ -96,15 +96,9 @@ vows.describe('Literal Test').addBatch( {
             assert.deepEqual(topic.completions(), []);
         },
         'parses "hello"' : function(topic) {
-            topic.push("o");
-            assert.equal(topic.text, "help");
-            assert.deepEqual(topic.expecting, ["p"]);
-            assert.deepEqual(topic.matching, ["h", "e", "l"]);
-            assert.deepEqual(topic.failing, ["l", "o"]);
-            assert.isFalse(topic.open());
-            assert.isFalse(topic.matched());
-            assert.isTrue(topic.failed());
-            assert.deepEqual(topic.completions(), []);
+			assert.throws(function() {
+				topic.push("o");
+			}, "Force Feeding Exception");
         }
     }
 }).export(module);
